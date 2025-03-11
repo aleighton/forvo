@@ -1,0 +1,32 @@
+{
+  "name": "forvo",
+  "version": "1.0.0",
+  "description": "Forvo’s API gives you access to 4 million audio pronunciations and translations in over 340 languages",
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": {
+    "export": "./dist/index.js",
+    "import": "./dist/index.d.ts"
+  },
+  "engines": {
+    "node": ">= 20"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run build"
+  },
+  "author": "Alex Leighton <a.leighton@proton.me>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.5.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.13.10",
+    "jest": "^29.7.0",
+    "jest-mock-axios": "^4.8.0",
+    "ts-jest": "^29.2.6",
+    "typescript": "^5.8.2"
+  }
+}
