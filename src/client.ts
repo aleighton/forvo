@@ -1,11 +1,12 @@
 import axios, {AxiosInstance} from 'axios';
 import * as endpoints from "./endpoints/index.js";
 
-class ForvoClient {
+export default class ForvoClient {
     private apiKey: string;
     private axiosInstance: AxiosInstance;
 
     public StandardPronunciation: endpoints.StandardPronunciation
+    public WordPronunciations: endpoints.WordPronunciations
 
 
     constructor(apiKey: string, returnFormat: string){
@@ -16,5 +17,6 @@ class ForvoClient {
         });
 
         this.StandardPronunciation = new endpoints.StandardPronunciation(this.axiosInstance, this.apiKey, returnFormat)
+        this.WordPronunciations = new endpoints.WordPronunciations(this.axiosInstance, this.apiKey, returnFormat)
     }
 }
